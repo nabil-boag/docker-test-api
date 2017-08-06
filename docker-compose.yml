@@ -22,9 +22,18 @@ services:
       - consume
   producer: 
     image: node:boron
+    ports:
+      - "80:80"
     container_name: producer
     volumes: 
       - ./producer:/usr/src/producer
+    entrypoint: 
+      - npm 
+      - run 
+      - produce
     working_dir: /usr/src/producer
     links: 
       - queue
+      - database
+  database:
+    image: mongo
