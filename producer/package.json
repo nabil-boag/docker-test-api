@@ -1,0 +1,19 @@
+{
+  "name": "docker-test-api-producer",
+  "version": "1.0.0",
+  "description": "Runs a NodeJS producer",
+  "main": "producer.js",
+  "scripts": {
+    "preproduce": "npm install",
+    "produce": "node producer.js"
+  },
+  "author": "Nabil Boag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabil-boag/docker-test-api/issues"
+  },
+  "homepage": "https://github.com/nabil-boag/docker-test-api#readme",
+  "dependencies": {
+    "amqp": "^0.2.6"
+  }
+}

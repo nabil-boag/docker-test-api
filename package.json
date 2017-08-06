@@ -1,0 +1,19 @@
+{
+  "name": "docker-test-api",
+  "version": "1.0.0",
+  "description": "An API that allows you to create and view asyncronous test results ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabil-boag/docker-test-api.git"
+  },
+  "author": "Nabil Boag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabil-boag/docker-test-api/issues"
+  },
+  "homepage": "https://github.com/nabil-boag/docker-test-api#readme"
+}

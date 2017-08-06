@@ -1,0 +1,19 @@
+{
+  "name": "docker-test-api-consumer",
+  "version": "1.0.0",
+  "description": "Runs a NodeJS consumer",
+  "main": "consumer.js",
+  "scripts": {
+    "preconsume": "npm install",
+    "consume": "node consumer.js"
+  },
+  "author": "Nabil Boag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nabil-boag/docker-test-api/issues"
+  },
+  "homepage": "https://github.com/nabil-boag/docker-test-api#readme",
+  "dependencies": {
+    "amqp": "^0.2.6"
+  }
+}

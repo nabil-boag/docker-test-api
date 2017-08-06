@@ -1,0 +1,30 @@
+version: "2"
+services:
+  queue:
+    build: ./queue
+    container_name: queue
+    hostname: nabiltest
+    environment: 
+      - RABBITMQ_DEFAULT_USER=root 
+      - RABBITMQ_DEFAULT_PASS=Passw0rd
+    ports:
+      - "15672:15672"
+  consumer: 
+    image: node:boron
+    volumes: 
+      - ./consumer:/usr/src/consumer
+    working_dir: /usr/src/consumer
+    links: 
+      - queue
+    entrypoint: 
+      - npm 
+      - run 
+      - consume
+  producer: 
+    image: node:boron
+    container_name: producer
+    volumes: 
+      - ./producer:/usr/src/producer
+    working_dir: /usr/src/producer
+    links: 
+      - queue
